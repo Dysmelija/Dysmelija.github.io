@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"name": "Dysmelija.github.io",
+			"path": ".."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Dysmelija.github.io",
+		"liveServer.settings.port": 5501
+	}
+}
