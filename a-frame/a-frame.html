@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Conceptual A-Frame Website</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script src="https://unpkg.com/aframe-environment-component/dist/aframe-environment-component.min.js"></script>
+  <style>
+    body { margin: 0; }
+    a-scene { height: 100vh; }
+  </style>
+</head>
+<body>
+  <a-scene>
+    <a-assets>
+      <a-asset-item id="vectevs" src="/a-frame/assetsA/My grandad watching tv.glb"></a-asset-item>
+      <audio id="kina" src="/a-frame/assetsA/Ķīna.mp3"></audio>
+    </a-assets>
+
+    
+    <a-entity gltf-model="#vectevs" position="0 1.5 -5"
+              animation="property: rotation; to: 0 360 0; loop: true; dur: 12000; easing: linear"></a-entity>
+    
+       <a-entity environment="preset: forest; dressingAmount: 500"></a-entity>
+
+    <a-entity geometry="primitive: sphere" position="0.775 5.498 -4.144" material="color: white"
+              light="type: point; intensity: 1" sound="src: #kina; on: click; volume: 2"></a-entity>
+
+    <a-light type="point" intensity="0" position="0.05538 4.25042 -2.80088"></a-light>
+    <a-light type="ambient" color="#445451"></a-light>
+    <a-light type="point" intensity="2" position="2 4 4"></a-light>
+
+    <a-image src="/a-frame/assetsA/b.jpg" position="5 2 -5" width="2" height="2" rotation="0 -45 0"></a-image>
+    <a-image src="/a-frame/assetsA/a.jpg" position="3.90 2 -7.88" width="2" height="2" rotation="0 -22.5 0"></a-image>
+    <a-image src="/a-frame/assetsA/d.jpg" position="1.56 2 -9.76" width="2" height="2" rotation="0 0 0"></a-image>
+    <a-image src="/a-frame/assetsA/c.jpg" position="-1.56 2 -9.76" width="2" height="2" rotation="0 22.5 0"></a-image>
+    <a-image src="/a-frame/assetsA/f.jpg" position="-3.90 2 -7.88" width="2" height="2" rotation="0 45 0"></a-image>
+    <a-image src="/a-frame/assetsA/e.jpg" position="-5 2 -5" width="2" height="2" rotation="0 67.5 0"></a-image>
+    <a-image src="/a-frame/assetsA/g.jpg" position="-3.90 2 -2.12" width="2" height="2" rotation="0 90 0"></a-image>
+
+    <a-entity id="cameraRig" position="0 1.6 0">
+        <a-entity camera look-controls wasd-controls>
+          <a-cursor color="white"></a-cursor>
+        </a-entity>
+      </a-entity>
+    </a-scene>
+  </body>
+  </html>
