@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dress-Up Game</title>
+    <style>
+        body {
+            background-image: url('/hatwall/bildes/istaba.jpg');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end; 
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            position: relative;
+        }
+        .game-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        .girl {
+            width: 400px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .hat {
+            width: 150px; 
+            position: absolute;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        .hat:active {
+            animation: clickAnimation 0.2s ease;
+        }
+        @keyframes clickAnimation {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+        
+        .hat1 { top: 10vh; left: 5vw; }
+        .hat2 { top: 15vh; right: 10vw; }
+        .hat3 { top: 13vh; left: 25vw; }
+        .hat4 { top: 39vh; right: 18vw; }
+        .hat5 { top: 40vh; left: 10vw; }
+        .hat6 { top: 47vh; right: 5vw; }
+        .hat7 { top: 44vh; left: 34vw; }
+        .hat8 { top: 2vh; right: 25vw; }
+        .hat9 { top: 50vh; left: 20vw; }
+        .hat10 { top: 67vh; right: 20vw; }
+        .hat11 { top: 70vh; left: 26vw; }
+        .hat12 { top: 75vh; right: 30vw; }
+        .hat13 { top: 3vh; left: 40vw; }
+        .hat14 { top: 9vh; right: 38vw; }
+        .hat15 { top: 4vh; left: 15vw; }
+        .hat16 { top: 35vh; right: 30vw; }
+        .hat17 { top: 26vh; left: 43vw; }
+        .hat18 { top: 76vh; right: 10vw; }
+        .hat19 { top: 80vh; left: 5vw; }
+        .hat20 { top: 55vh; right: 35vw; }
+    </style>
+</head>
+<body>
+    <div class="game-container">
+        <img src="/hatwall/bildes/00.PNG" alt="Girl" class="girl" id="girl-image">
+        <img src="/hatwall/bildes/1.PNG" alt="Hat 1" class="hat hat1" onclick="changeGirl('/hatwall/bildes/1.2.PNG')">
+        <img src="/hatwall/bildes/2.PNG" alt="Hat 2" class="hat hat2" onclick="changeGirl('/hatwall/bildes/2.2.PNG')">
+        <img src="/hatwall/bildes/3.PNG" alt="Hat 3" class="hat hat3" onclick="changeGirl('/hatwall/bildes/3.2.PNG')">
+        <img src="/hatwall/bildes/4.PNG" alt="Hat 4" class="hat hat4" onclick="changeGirl('/hatwall/bildes/4.2.PNG')">
+        <img src="/hatwall/bildes/5.PNG" alt="Hat 5" class="hat hat5" onclick="changeGirl('/hatwall/bildes/5.2.PNG')">
+        <img src="/hatwall/bildes/6.PNG" alt="Hat 6" class="hat hat6" onclick="changeGirl('/hatwall/bildes/6.2.PNG')">
+        <img src="/hatwall/bildes/7.PNG" alt="Hat 7" class="hat hat7" onclick="changeGirl('/hatwall/bildes/7.2.PNG')">
+        <img src="/hatwall/bildes/8.PNG" alt="Hat 8" class="hat hat8" onclick="changeGirl('/hatwall/bildes/8.2.PNG')">
+        <img src="/hatwall/bildes/9.PNG" alt="Hat 9" class="hat hat9" onclick="changeGirl('/hatwall/bildes/9.2.PNG')">
+        <img src="/hatwall/bildes/10.PNG" alt="Hat 10" class="hat hat10" onclick="changeGirl('/hatwall/bildes/10.2.PNG')">
+        <img src="/hatwall/bildes/11.PNG" alt="Hat 11" class="hat hat11" onclick="changeGirl('/hatwall/bildes/11.2.PNG')">
+        <img src="/hatwall/bildes/12.PNG" alt="Hat 12" class="hat hat12" onclick="changeGirl('/hatwall/bildes/12.2.PNG')">
+        <img src="/hatwall/bildes/13.PNG" alt="Hat 13" class="hat hat13" onclick="changeGirl('/hatwall/bildes/13.2.PNG')">
+        <img src="/hatwall/bildes/14.PNG" alt="Hat 14" class="hat hat14" onclick="changeGirl('/hatwall/bildes/14.2.PNG')">
+        <img src="/hatwall/bildes/15.PNG" alt="Hat 15" class="hat hat15" onclick="changeGirl('/hatwall/bildes/15.2.PNG')">
+        <img src="/hatwall/bildes/16.PNG" alt="Hat 16" class="hat hat16" onclick="changeGirl('/hatwall/bildes/16.2.PNG')">
+        <img src="/hatwall/bildes/17.PNG" alt="Hat 17" class="hat hat17" onclick="changeGirl('/hatwall/bildes/17.2.PNG')">
+        <img src="/hatwall/bildes/18.PNG" alt="Hat 18" class="hat hat18" onclick="changeGirl('/hatwall/bildes/18.2.PNG')">
+        <img src="/hatwall/bildes/19.PNG" alt="Hat 19" class="hat hat19" onclick="changeGirl('/hatwall/bildes/19.2.PNG')">
+        <img src="/hatwall/bildes/20.PNG" alt="Hat 20" class="hat hat20" onclick="changeGirl('/hatwall/bildes/20.2.PNG')">
+    </div>
+
+    <script>
+        function changeGirl(girlSrc) {
+            const girlImage = document.getElementById('girl-image');
+            girlImage.src = girlSrc;
+        }
+    </script>
+</body>
+</html>
